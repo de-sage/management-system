@@ -23,6 +23,7 @@ public class Compressor {
 
     private boolean health = true;
 
+    @Column(unique = true)
     private String name;
 
     @OneToMany(mappedBy = "compressor", cascade = {CascadeType.ALL})

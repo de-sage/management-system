@@ -31,6 +31,10 @@ public class PlantManagerController {
     private CompressorRepository compressorRepository;
 
 
+    @GetMapping(path = "/records/by/{name}")
+    public List<CompressorRecord>findAll(@PathVariable String name) {
+        return adminService.findAllChecksPerformedByAnEngineer(name);
+    }
 
     @GetMapping(path = "/records")
     public List<CompressorRecord>findAll() {

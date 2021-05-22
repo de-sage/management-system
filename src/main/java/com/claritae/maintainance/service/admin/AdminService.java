@@ -13,6 +13,8 @@ public interface AdminService {
     List<CompressorRecord> findAllCompressorRecordsByCompressorId(Integer id);
     List<CompressorRecord> findAllCompressorRecordsByDate(LocalDate localDateTime);
     List<Compressor> findAllCompressor();
+    List<Compressor> findAllCompressorWithBadHealth();
+    List<CompressorRecord> findAllChecksPerformedByAnEngineer(String name);
     Compressor create(Compressor compressor);
-    Compressor createChecks(Integer CompressorId, CompressorRecord compressorRecord);
+    List<CompressorRecord> createChecks(Integer CompressorId, CompressorRecord compressorRecord);
 }
